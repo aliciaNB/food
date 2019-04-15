@@ -17,7 +17,8 @@ $f3->set('DEBUG', 3);
 $f3->route('GET /', function() {
 
     //Display a view
-    echo "FOOD!!!";
+    $view = new Template();
+    echo $view->render('views/home.html');
 });
 
 //Run Fat-free
