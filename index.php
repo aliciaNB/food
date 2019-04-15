@@ -29,12 +29,29 @@ $f3->route('GET /breakfast', function() {
     echo $view->render('views/breakfast.html');
 });
 
+//Define a  continental breakfast route
+$f3->route('GET /breakfast/continental', function() {
+
+    //Display breakfast view
+    $view = new Template();
+    echo $view->render('views/bfast-cont.html');
+});
+
+
 $f3->route('GET /lunch', function() {
 
     //Display lunch view
     $view = new Template();
     echo $view->render('views/lunch.html');
 });
+
+$f3->route('GET /lunch/brunch/buffet', function() {
+
+    //Display lunch view
+    $view = new Template();
+    echo $view->render('views/buffet.html');
+});
+
 
 //Run Fat-free
 $f3->run();
